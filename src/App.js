@@ -9,14 +9,20 @@ class App extends React.Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		fetch();
+	}
 	render() {
 		return (
-			<div>
-				<NavBar />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='About' element={<About />} />
-				</Routes>
+			<div className='App'>
+				<header>
+					<img src={logo} className='App-logo' alt='logo' />
+					<NavBar />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='about' element={<About />} />
+					</Routes>
+				</header>
 			</div>
 		);
 	}
