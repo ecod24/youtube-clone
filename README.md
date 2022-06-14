@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Trello] (https://trello.com/b/1PVmQDu2/youtube-project-83)
+[Trello](https://trello.com/b/1PVmQDu2/youtube-project-83)
 
 ## Available Scripts
 
