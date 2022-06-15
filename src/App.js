@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar';
 import React from 'react';
+import { Route, Routes} from "react-router-dom"
+import Home from './Components/Home'
+import About from "./Components/About"
 
 class App extends React.Component {
 	constructor() {
@@ -9,9 +12,6 @@ class App extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
-		fetch();
-	}
 	render() {
 		return (
 			<div className='App'>
@@ -20,7 +20,7 @@ class App extends React.Component {
 					<NavBar />
 					<Routes>
 						<Route path='/' element={<Home />} />
-						<Route path='about' element={<About />} />
+						<Route path='/about' element={<About />} />
 					</Routes>
 				</header>
 			</div>
