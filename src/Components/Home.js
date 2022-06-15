@@ -26,7 +26,7 @@ class Home extends React.Component {
 							type='text'
 							id='search'
 							name='search'
-							placeholder='Search'
+							placeholder='Search...'
 							onChange={this.handleSearch}
 						/>
 						<button className='search-button'>Search</button>
