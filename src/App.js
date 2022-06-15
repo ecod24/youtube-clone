@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Videos from "./Components/Videos";
+import Search from "./Components/Search";
 
 class App extends React.Component {
 	constructor() {
@@ -23,7 +24,8 @@ class App extends React.Component {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
-						<Route path="/videos" element={<Videos />} />
+						<Route path="/videos/:id" element={<Videos />} />
+						{/* <Route path="/search/:id" element={<Search />} /> */}
 					</Routes>
 				</header>
 			</div>
