@@ -7,7 +7,6 @@ import About from "./Components/About";
 import Videos from "./Components/Videos";
 import Search from "./Components/Search";
 
-
 class App extends React.Component {
 	constructor() {
 		super();
@@ -18,7 +17,6 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<header>
-					<img src={logo} className="App-logo" alt="logo" />
 					<NavBar />
 
 					<Routes>
