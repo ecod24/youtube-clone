@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
-// import Videos from "./Components/Videos";
+import Videos from "./Components/Videos";
 
 class App extends React.Component {
 	constructor() {
