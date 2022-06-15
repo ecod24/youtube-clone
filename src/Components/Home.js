@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			searchBar: '',
+			searchBar: "",
 		};
 	}
 
@@ -14,7 +14,7 @@ class Home extends React.Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
-		this.setState({ searchBar: '' });
+		this.setState({ searchBar: "" });
 	};
 	render() {
 		return (
@@ -23,13 +23,13 @@ class Home extends React.Component {
 					<label>
 						<input
 							value={this.state.searchBar}
-							type='text'
-							id='search'
-							name='search'
-							placeholder='Search...'
+							type="text"
+							id="search"
+							name="search"
+							placeholder="Search..."
 							onChange={this.handleSearch}
 						/>
-						<button className='search-button'>Search</button>
+						<button className="search-button">Search</button>
 					</label>
 				</form>
 			</main>
