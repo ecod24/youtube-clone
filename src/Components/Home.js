@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import Videos from "./Videos";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			searchBar: '',
+			searchBar: "",
+			videos: [],
 		};
 	}
 
@@ -14,8 +17,16 @@ class Home extends React.Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
-		this.setState({ searchBar: '' });
+		fetch(
+			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${this.state.searchBar}&key=${process.env.REACT_APP_API_KEY}`
+		)
+			.then((response) => response.json())
+			.then((obj) => {
+				this.setState({ videos: [...obj.items] });
+			});
+		this.setState({ searchBar: "" });
 	};
+
 	render() {
 		return (
 			<main>
@@ -23,15 +34,28 @@ class Home extends React.Component {
 					<label>
 						<input
 							value={this.state.searchBar}
-							type='text'
-							id='search'
-							name='search'
-							placeholder='Search...'
+							type="text"
+							id="search"
+							name="search"
+							placeholder="Search..."
 							onChange={this.handleSearch}
 						/>
-						<button className='search-button'>Search</button>
+						<button className="search-button">Search</button>
 					</label>
 				</form>
+
+				<section className="hidden">
+					Results:
+					{this.state.videos.map((video) => {
+						return (
+							<div>
+								<Link to={`/videos/${video.id.videoId}`}>
+									{video.snippet.title}
+								</Link>
+							</div>
+						);
+					})}
+				</section>
 			</main>
 		);
 	}
