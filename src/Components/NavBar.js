@@ -6,7 +6,7 @@ export const NavBar = () => {
 			Youtube &nbsp;
 			<Link to="/">Home</Link> &nbsp;
 			<Link to="/about">About</Link>
-			<Link to="/videos"> VIDEOS TEST</Link>
+			
 		</header>
 	);
 };
