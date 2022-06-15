@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './Components/NavBar';
-import React from 'react';
-import { Route, Routes} from "react-router-dom"
-import Home from './Components/Home'
-import About from "./Components/About"
+import logo from "./logo.svg";
+import "./App.css";
+import NavBar from "./Components/NavBar";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./Components/About";
+// import Videos from "./Components/Videos";
 
 class App extends React.Component {
 	constructor() {
@@ -14,13 +15,14 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className='App'>
+			<div className="App">
 				<header>
-					<img src={logo} className='App-logo' alt='logo' />
+					<img src={logo} className="App-logo" alt="logo" />
 					<NavBar />
+
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/about' element={<About />} />
+						<Route path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
 					</Routes>
 				</header>
 			</div>
