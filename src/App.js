@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Videos from "./Components/Videos";
 
+
 class App extends React.Component {
 	constructor() {
 		super();
@@ -22,6 +23,7 @@ class App extends React.Component {
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/videos/:id" element={<Videos />} />
+
 					</Routes>
 				</header>
 			</div>

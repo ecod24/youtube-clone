@@ -41,3 +41,7 @@ h2 {
 .about {
     background-color: white;
 }
+.videos {
+    display: grid;
+    grid-template-columns:  1fr 1fr
+}

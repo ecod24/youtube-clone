@@ -1,12 +1,12 @@
-import React from "react";
-import Videos from "./Videos";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Videos from './Videos';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			searchBar: "",
+			searchBar: '',
 			videos: [],
 		};
 	}
@@ -24,7 +24,7 @@ class Home extends React.Component {
 			.then((obj) => {
 				this.setState({ videos: [...obj.items] });
 			});
-		this.setState({ searchBar: "" });
+		this.setState({ searchBar: '' });
 	};
 
 	render() {
@@ -34,24 +34,28 @@ class Home extends React.Component {
 					<label>
 						<input
 							value={this.state.searchBar}
-							type="text"
-							id="search"
-							name="search"
-							placeholder="Search..."
+							type='text'
+							id='search'
+							name='search'
+							placeholder='Search...'
 							onChange={this.handleSearch}
 							autoComplete="no"
 						/>
-						<button className="search-button">Search</button>
+						<button className='search-button'>Search</button>
 					</label>
 				</form>
 
-				<section className="hidden">
-					Results:
+				<section className='videos'>
 					{this.state.videos.map((video) => {
 						return (
 							<div>
 								<Link to={`/videos/${video.id.videoId}`}>
-									{video.snippet.title}
+									<h3>{video.snippet.title}</h3>
+									<h4>{video.snippet.channelTitle}</h4>
+									<img
+										src={`${video.snippet.thumbnails.default.url}`}
+										alt=''
+									></img>
 								</Link>
 							</div>
 						);
