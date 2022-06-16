@@ -1,4 +1,3 @@
-import { Component } from "react";
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 

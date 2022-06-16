@@ -1,6 +1,6 @@
 import React from "react";
-import Video from "./Video";
 import { Link } from "react-router-dom";
+import Videos from "./Videos";
 
 class Home extends React.Component {
 	constructor() {
@@ -50,20 +50,11 @@ class Home extends React.Component {
 				</form>
 
 				<section className="videos">
-					{this.state.videos.map((video) => {
-						return (
-							<div>
-								<Link to={`/videos/${video.id.videoId}`}>
-									<h3>{video.snippet.title}</h3>
-									<h4>{video.snippet.channelTitle}</h4>
-									<img
-										src={`${video.snippet.thumbnails.default.url}`}
-										alt=""
-									></img>
-								</Link>
-							</div>
-						);
-					})}
+					{
+						<div>
+							<Videos vids={this.state.videos} />
+						</div>
+					}
 				</section>
 			</main>
 		);
