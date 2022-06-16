@@ -41,7 +41,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Videos from "./Components/Videos";
+<<<<<<< HEAD
 //import Search from "./Components/Search";
+=======
+>>>>>>> 7078e19d192054bfcf7e850f48999fd47eb2dd3c
 
 class App extends React.Component {
 	constructor() {
@@ -59,7 +62,7 @@ class App extends React.Component {
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/videos/:id" element={<Videos />} />
-						{/* <Route path="/search/:id" element={<Search />} /> */}
+
 					</Routes>
 				</header>
 			</div>
