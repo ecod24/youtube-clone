@@ -60,6 +60,9 @@ class Home extends React.Component {
 							</div>
 						);
 					})}
+					{/* <p>No Search Results Yet !,  Please Submit a search above !</p>
+                </div>) : null }
+                </div> */}
 				</section>
 			</main>
 		);
