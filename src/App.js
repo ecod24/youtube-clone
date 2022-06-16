@@ -41,7 +41,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Videos from "./Components/Videos";
-import Search from "./Components/Search";
+//import Search from "./Components/Search";
 
 class App extends React.Component {
 	constructor() {
