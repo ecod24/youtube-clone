@@ -39,6 +39,7 @@ class Home extends React.Component {
 							name='search'
 							placeholder='Search...'
 							onChange={this.handleSearch}
+							autoComplete="no"
 						/>
 						<button className='search-button'>Search</button>
 					</label>
