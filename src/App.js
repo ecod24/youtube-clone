@@ -5,21 +5,29 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Video from "./Components/Video";
+import SearchBar from "./Components/SearchBar";
+import "./App.css";
 
 class App extends React.Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			videos: [],
+		};
 	}
+
+	updateVideos = (videos) => {
+		this.setState({ videos: [...videos] });
+	};
 
 	render() {
 		return (
 			<div className="App">
 				<header>
 					<NavBar />
-					{/* <Home/> */}
+					<SearchBar updateVideos={this.updateVideos} />
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Home videos={this.state.videos} />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/video/:id" element={<Video />} />
 					</Routes>

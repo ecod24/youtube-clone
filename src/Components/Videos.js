@@ -1,8 +1,6 @@
 import React from "react";
-import Video from "./Video";
 import { Link } from "react-router-dom";
 import "./Videos.css";
-import { Route, Routes } from "react-router-dom";
 
 export default function Videos(props) {
 	const { vids } = props;

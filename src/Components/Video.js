@@ -1,5 +1,6 @@
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
+// import Comments from './Components/Comments'
 
 function Video() {
 	const { id } = useParams();
@@ -34,9 +35,13 @@ function Video() {
 					<YouTube videoId={id} />
 					<p> {/*video description*/}</p>
 				</div>
+				{/* <Comments /> */}
 			</div>
 		</div>
+
+
 	);
+
 }
 //opts={{ height: "690", width: "1040" }}
 // }

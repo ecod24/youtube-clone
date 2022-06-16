@@ -1,14 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Videos from "./Videos";
 
 class Home extends React.Component {
 	constructor() {
 		super();
-		this.state = {
-			searchBar: "",
-			videos: [],
-		};
+		this.state = {};
 	}
 
 	handleSearch = (event) => {
@@ -32,27 +28,13 @@ class Home extends React.Component {
 	};
 
 	render() {
+		const { videos } = this.props;
 		return (
 			<main>
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						<input
-							value={this.state.searchBar}
-							type="text"
-							id="search"
-							name="search"
-							placeholder="Search..."
-							onChange={this.handleSearch}
-							autoComplete="no"
-						/>
-						<button className="search-button">Search</button>
-					</label>
-				</form>
-
 				<section className="videos">
 					{
 						<div>
-							<Videos vids={this.state.videos} />
+							<Videos vids={videos} />
 						</div>
 					}
 				</section>
