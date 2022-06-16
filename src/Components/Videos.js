@@ -31,12 +31,13 @@ function Videos() {
 		<div className="video-card">
 			<div className="videos">
 				<div>
-					<YouTube videoId={id} opts={{ height: "690", width: "1040" }} />
+					<YouTube videoId={id} />
 				</div>
 			</div>
 		</div>
 	);
 }
+//opts={{ height: "690", width: "1040" }}
 // }
 
 export default Videos;
