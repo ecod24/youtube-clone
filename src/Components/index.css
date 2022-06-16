@@ -4,6 +4,18 @@ header {
   
 }
 
+.youtube {
+    color:white;
+    font-family: Georgia;
+    text-align: left;
+    padding-top: 2%;
+    
+}
+
+.links {
+    color:white;
+
+}
 
 h2 {
     font-family: Georgia;
@@ -28,20 +40,24 @@ h2 {
 
 #search {
     width: 25%;
+    font-family: Georgia;
 }
 
 .search-button {
     background-color: red;
     border-radius: 15px;
+    font-family: Georgia;
     color: white;
     width: 10%;
     padding: 5px;
 }
+
 
 .about {
     background-color: white;
 }
 .videos {
     display: grid;
-    grid-template-columns:  1fr 1fr
+    grid-template-columns:  1fr 1fr;
+    background-color: white;
 }

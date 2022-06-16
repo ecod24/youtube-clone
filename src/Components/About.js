@@ -3,7 +3,8 @@ import './index.css';
 
 export const About = () => {
 	return (
-		<div className='about'>
+		<main>
+       <div className='about'>
 			<h2 className='youtube-clone'>Youtube Clone Project</h2>
 			<p className='text'>
 				For this project we were tasked with creating a clone of the infamous
@@ -65,7 +66,8 @@ export const About = () => {
 			<p className='text'>Please see the links below to connect with Taryne!</p>
 			<a href='https://github.com/TaryneLeach'>Github</a> &nbsp;
 			<a href='https://www.linkedin.com/in/taryne-leachgonzalez/'>Linkedin</a>
-		</div>
+            </div>
+		</main>
 	);
 };
 

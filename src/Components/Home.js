@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 class Home extends React.Component {
 	constructor() {
 		super();
+		this.state = {};
+	}
+
+	updateVideos = (videos) => {
+		this.setState({ videos: [...videos] });
 		this.state = {
 			searchBar: "",
 			videos: [],
@@ -32,8 +37,11 @@ class Home extends React.Component {
 	};
 
 	render() {
+		const { videos } = this.props;
 		return (
 			<main>
+				<section className='videos'>
+					{videos.map((video) => {
 				<form onSubmit={this.handleSubmit}>
 					<label>
 						<input
@@ -54,8 +62,10 @@ class Home extends React.Component {
 						return (
 							<div>
 								<Link to={`/videos/${video.id.videoId}`}>
-									<h3>{video.snippet.title}</h3>
-									<h4>{video.snippet.channelTitle}</h4>
+									<h4>{video.snippet.title}</h4>
+									<p>{video.snippet.channelTitle}</p>
+									{/* figure out html problems in video links */}
+									{console.log(video.snippet.title)}
 									<img
 										src={`${video.snippet.thumbnails.default.url}`}
 										alt=""
