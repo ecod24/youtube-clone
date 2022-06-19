@@ -2,7 +2,7 @@ import { Component } from "react";
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 
-function Videos() {
+function Video() {
 	const { id } = useParams();
 	// constructor() {
 	// 	super();
@@ -27,17 +27,19 @@ function Videos() {
 	// 		});
 	// };
 	// render() {
-// 	return (
-// 		<p>Titles</p>
-// 		<div className="video-card">
-// 			<div className="videos">
-// 				<div>
-// 					<YouTube videoId={id} opts={{ height: "690", width: "1040" }} />
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// }
+	return (
+		<div className="video-card">
+			<div className="videos">
+				<div>
+					<p>{/*video title */}</p>
+					<YouTube videoId={id} />
+					<p> {/*video description*/}</p>
+				</div>
+			</div>
+		</div>
+	);
+}
+//opts={{ height: "690", width: "1040" }}
 // }
 
-//export default Videos;
+export default Video;
