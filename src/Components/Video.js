@@ -1,49 +1,44 @@
 import YouTube from "react-youtube";
-import { useParams } from "react-router-dom";
+
 // import Comments from './Components/Comments'
+//https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=2Q_ZzBGPdqE&key=[YOUR_API_KEY]'
+// import Videos from "./Videos";
+import withParams from "./WithParams";
 
-function Video() {
-	const { id } = useParams();
-	// constructor() {
-	// 	super();
-	// 	this.state = {
-	// 		id: "",
-	// 	};
-	// }
-	// componentDidMount() {
-	// 	this.getVideo();
-	// }
-	// getVideo = () => {
-	// 	const { searchQuery } = this.props;
-	// 	fetch(
-	// 		`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=test&key=${process.env.REACT_APP_API_KEY}`
-	// 	)
-	// 		.then((response) => {
-	// 			return response.json();
-	// 		})
-	// 		.then((obj) => {
-	// 			// console.log(obj);
-	// 			this.setState({ id: obj.items[0].id.videoId });
-	// 		});
-	// };
-	// render() {
-	return (
-		<div className="video-card">
-			<div className="videos">
+import React, { Component } from "react";
+
+class Video extends Component {
+	constructor() {
+		super();
+		this.state = {
+			info: {},
+		};
+	}
+	componentDidMount() {
+		const { id } = this.props.params;
+		fetch(
+			`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`
+		)
+			.then((response) => response.json())
+			.then((object) => {
+				console.log("this actually ran");
+				this.setState({ info: object });
+				console.log(this.state.info);
+			})
+			.catch((error) => console.log(error, "oh well"));
+	}
+	render() {
+		const { id } = this.props.params;
+		return (
+			<div>
+				{" "}
 				<div>
-					<p>{/*video title */}</p>
-					<YouTube videoId={id} />
-					<p> {/*video description*/}</p>
+					{/*STATE INFO TO PUT TITLE HERE STATE IS AFK HERE WHEN I RENDER WHY WTF*/}
 				</div>
-				{/* <Comments /> */}
+				<YouTube videoId={id} />
 			</div>
-		</div>
-
-
-	);
-
+		);
+	}
 }
-//opts={{ height: "690", width: "1040" }}
-// }
 
-export default Video;
+export default withParams(Video);

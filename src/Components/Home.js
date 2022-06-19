@@ -34,7 +34,7 @@ class Home extends React.Component {
 				<section className="videos">
 					{
 						<div>
-							<Videos vids={videos} />
+							<Videos key="vidz" vids={videos} />
 						</div>
 					}
 				</section>
