@@ -36,6 +36,7 @@ class PageNotFound extends Component {
 							<Modal.Body>
 								<h1 style={{ color: 'red', fontSize: 20 }}>Error</h1>
 								<h3>Please enter a valid search!</h3>
+                <img className="error-photo" src="https://thumbs.dreamstime.com/z/cartoon-bodyguard-stop-cartoon-illustration-bodyguard-holding-up-stop-sign-135524686.jpg" alt=""/>
 								<p className='home' style={{ fontSize: 15 }}>
 									<Link style={{ color: 'black' }} to='/'>
 										Home
