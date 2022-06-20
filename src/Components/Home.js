@@ -1,5 +1,6 @@
 import React from "react";
 import Videos from "./Videos";
+import "./Home.css" 
 
 class Home extends React.Component {
 	constructor() {
