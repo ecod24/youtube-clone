@@ -43,7 +43,7 @@ class Comments extends React.Component {
 						type='text'
 						id='comments'
 						name='comments'
-						placeholder='...'
+						placeholder='Add a comment...'
 						onChange={this.handleComments}
 					/>
 					<button>Submit</button>
