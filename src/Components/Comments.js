@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 class Comments extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			commentName: "",
-			comment: "",
+			commentName: '',
+			comment: '',
 			comments: [],
 		};
 	}
@@ -19,8 +19,8 @@ class Comments extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 
-		this.setState({ commentName: "" });
-		this.setState({ comment: "" });
+		this.setState({ commentName: '' });
+		this.setState({ comment: '' });
 
 		// add comment and comment name to end of page
 	};
@@ -31,20 +31,20 @@ class Comments extends React.Component {
 				<label>
 					<input
 						value={this.commentName}
-						type="text"
-						id="commentName"
-						name="commentName"
-						placeholder="Name"
+						type='text'
+						id='commentName'
+						name='commentName'
+						placeholder='Name'
 						onChange={this.handleCommentName}
 					/>
 				</label>
 				<label>
 					<input
 						value={this.state.comment}
-						type="text"
-						id="comments"
-						name="comments"
-						placeholder="..."
+						type='text'
+						id='comments'
+						name='comments'
+						placeholder='Add a comment...'
 						onChange={this.handleComments}
 					/>
 					<button>Submit</button>
