@@ -1,5 +1,4 @@
 import React from "react";
-
 class SearchBar extends React.Component {
 	constructor() {
 		super();
@@ -11,7 +10,6 @@ class SearchBar extends React.Component {
 		const { value } = event.target;
 		this.setState({ searchBar: value });
 	};
-
 	handleSubmit = (event) => {
 		const { updateVideos } = this.props;
 		event.preventDefault();
@@ -20,14 +18,15 @@ class SearchBar extends React.Component {
 			return;
 		}
 		fetch(
-			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${this.state.searchBar}&key=${process.env.REACT_APP_API_KEY}`
+			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.searchBar}&key=${process.env.REACT_APP_API_KEY}`
 		)
 			.then((response) => response.json())
 			.then((obj) => {
 				updateVideos(obj.items);
 			});
-		this.setState({ searchBar: '' });
-	} ;
+		this.setState({ searchBar: "" });
+		//useNavigate('/');
+	};
 
 	render() {
 		return (
@@ -45,12 +44,8 @@ class SearchBar extends React.Component {
 						<button className="search-button">Search</button>
 					</label>
 				</form>
-                <div>
-
-                </div>
 			</main>
 		);
 	}
 }
-
 export default SearchBar;

@@ -19,5 +19,4 @@ class Video extends Component {
 		);
 	}
 }
-
 export default withParams(Video);
