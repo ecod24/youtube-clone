@@ -1,19 +1,24 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import "./NavBar.css";
 
-export const NavBar = () => {
+const NavBar = () => {
 	return (
-		<header>
-			<div className="youtube">
-				Youtube &nbsp;
-				<Link className="links" to="/">
-					Home
-				</Link>{" "}
-				&nbsp;
-				<Link className="links" to="/about">
-					About
-				</Link>
-			</div>
-		</header>
+		<nav>
+			<Link to="/">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+					alt="youtube icon"
+					style={{ height: "100px", width: "200px" }}
+				/>
+			</Link>
+			<Link className="button gray" to="/">
+				Home
+			</Link>{" "}
+			<Link className="button gray" to="/about">
+				About
+			</Link>
+		</nav>
 	);
 };
 

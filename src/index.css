@@ -1,13 +1,70 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+		"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+header {
+	background-color: red;
+	padding: auto;
+}
+
+.youtube {
+	color: white;
+	font-family: Georgia;
+	text-align: left;
+	padding-top: 2%;
+}
+
+.links {
+	color: white;
+}
+
+h2 {
+	font-family: Georgia;
+	text-decoration: underline;
+}
+
+.youtube-clone {
+	padding-top: 15px;
+}
+
+.text {
+	font-family: Georgia;
+}
+
+.photo {
+	max-width: 200px;
+	height: auto;
+	font-family: Georgia;
+}
+
+#search {
+	width: 25%;
+	font-family: Georgia;
+}
+
+.search-button {
+	background-color: red;
+	border-radius: 15px;
+	font-family: Georgia;
+	color: white;
+	width: 10%;
+	padding: 5px;
+	background: none;
+	border-style: solid;
+}
+
+.about {
+	background-color: white;
+}
+.videos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: white;
 }

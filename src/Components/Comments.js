@@ -6,6 +6,7 @@ class Comments extends React.Component {
 		this.state = {
 			commentName: '',
 			comment: '',
+			comments: [],
 		};
 	}
 
@@ -17,7 +18,7 @@ class Comments extends React.Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
-		
+
 		this.setState({ commentName: '' });
 		this.setState({ comment: '' });
 

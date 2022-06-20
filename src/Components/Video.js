@@ -1,6 +1,11 @@
 import YouTube from "react-youtube";
-import { useParams } from "react-router-dom";
+
 // import Comments from './Components/Comments'
+//https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=2Q_ZzBGPdqE&key=[YOUR_API_KEY]'
+// import Videos from "./Videos";
+import withParams from "./WithParams";
+
+import React, { Component } from "react";
 
 function Video() {
 	const { id } = useParams();
@@ -9,18 +14,14 @@ function Video() {
 		<div className="video-card">
 			<div className="videos">
 				<div>
-					<p>{/*video title */}</p>
-					<YouTube videoId={id} />
-					<p> {/*video description*/}</p>
+					{/*STATE INFO TO PUT TITLE HERE STATE IS AFK HERE WHEN I RENDER WHY WTF*/}
+					{/* {this.state.info.items[0].snippet.title} */}
 				</div>
-				{/* <Comments /> */}
+				<YouTube videoId={id} />
+				</div>
 			</div>
-		</div>
-
-
-	);
-
+		);
+	
 }
 
-
-export default Video;
+export default withParams(Video);
