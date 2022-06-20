@@ -26,12 +26,12 @@ class App extends React.Component {
 				<header>
 					<NavBar />
 					<SearchBar updateVideos={this.updateVideos} />
-					<Routes>
-						<Route path="/" element={<Home videos={this.state.videos} />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/video/:id" element={<Video />} />
-					</Routes>
 				</header>
+				<Routes>
+					<Route path="/" element={<Home videos={this.state.videos} />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/video/:id" element={<Video />} />
+				</Routes>
 			</div>
 		);
 	}
