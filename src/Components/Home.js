@@ -5,13 +5,16 @@ import "./Home.css"
 class Home extends React.Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+
+        };
 	}
 
 	render() {
 		const { videos } = this.props;
 		return (
 			<main>
+                
 				<section className="videos">
 					{
 						<div>

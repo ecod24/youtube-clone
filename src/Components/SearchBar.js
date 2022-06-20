@@ -26,8 +26,8 @@ class SearchBar extends React.Component {
 			.then((obj) => {
 				updateVideos(obj.items);
 			});
-		this.setState({ searchBar: "" });
-	};
+		this.setState({ searchBar: '' });
+	} ;
 
 	render() {
 		return (
@@ -45,6 +45,9 @@ class SearchBar extends React.Component {
 						<button className="search-button">Search</button>
 					</label>
 				</form>
+                <div>
+
+                </div>
 			</main>
 		);
 	}

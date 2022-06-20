@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Videos.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Videos.css';
 
 export default function Videos(props) {
 	const { vids } = props;
@@ -11,7 +11,10 @@ export default function Videos(props) {
 					<Link key={video.etag} to={`/video/${video.id.videoId}`}>
 						<section>
 							<div>
-								<img src={`${video.snippet.thumbnails.default.url}`} alt=""></img>
+								<img
+									src={`${video.snippet.thumbnails.default.url}`}
+									alt=''
+								></img>
 							</div>
 							<div>
 								<h3>{video.snippet.title}</h3>
