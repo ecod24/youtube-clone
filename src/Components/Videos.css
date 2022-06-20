@@ -1,5 +1,8 @@
-section {
+.video-list {
 	display: grid;
-	grid-template-columns: 3fr 7fr;
-        
+	grid-template-columns: 3fr 10fr;
+	align-items: center;
+}
+.description {
+	font-size: 12px;
 }

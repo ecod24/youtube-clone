@@ -27,6 +27,7 @@ class SearchBar extends React.Component {
 				updateVideos(obj.items);
 			});
 		this.setState({ searchBar: "" });
+		//useNavigate('/');
 	};
 
 	render() {

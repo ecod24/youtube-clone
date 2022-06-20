@@ -8,17 +8,21 @@ export default function Videos(props) {
 		<div>
 			{vids.map((video) => {
 				return (
-					<Link key={video.etag} to={`/video/${video.id.videoId}`}>
-						<section>
+					<div className="video-list">
+						<Link key={video.etag} to={`/video/${video.id.videoId}`}>
 							<div>
 								<img src={`${video.snippet.thumbnails.default.url}`} alt=""></img>
 							</div>
-							<div>
+						</Link>
+						<div>
+							<Link key={video.etag} to={`/video/${video.id.videoId}`}>
 								<h3>{video.snippet.title}</h3>
-								<h5>{video.snippet.channelTitle}</h5>
-							</div>
-						</section>
-					</Link>
+							</Link>
+							<h5>{video.snippet.channelTitle}</h5>
+
+							<p className="description">{video.snippet.description}</p>
+						</div>
+					</div>
 				);
 			})}
 		</div>
