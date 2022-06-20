@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
 			return;
 		}
 		fetch(
-			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${this.state.searchBar}&key=${process.env.REACT_APP_API_KEY}`
+			`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.searchBar}&key=${process.env.REACT_APP_API_KEY}`
 		)
 			.then((response) => response.json())
 			.then((obj) => {
