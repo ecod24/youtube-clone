@@ -1,30 +1,14 @@
 import React from "react";
 import Videos from "./Videos";
-import "./Home.css" 
+import "./Home.css";
 
-class Home extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-
-        };
-	}
-
-	render() {
-		const { videos } = this.props;
-		return (
-			<main>
-                
-				<section className="videos">
-					{
-						<div>
-							<Videos key="vidz" vids={videos} />
-						</div>
-					}
-				</section>
-			</main>
-		);
-	}
+function Home(props) {
+	const { videos } = props;
+	return (
+		<main>
+			<section className="videos">{<Videos key="vidz" vids={videos} />}</section>
+		</main>
+	);
 }
 
 export default Home;
