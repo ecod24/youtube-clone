@@ -14,9 +14,10 @@ class Video extends Component {
 			info: {},
 		};
 	}
-	componentDidMount() {
+	getYoutubeInfo = () => {};
+	async componentDidMount() {
 		const { id } = this.props.params;
-		fetch(
+		await fetch(
 			`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`
 		)
 			.then((response) => response.json())
@@ -34,6 +35,7 @@ class Video extends Component {
 				{" "}
 				<div>
 					{/*STATE INFO TO PUT TITLE HERE STATE IS AFK HERE WHEN I RENDER WHY WTF*/}
+					{/* {this.state.info.items[0].snippet.title} */}
 				</div>
 				<YouTube videoId={id} />
 			</div>

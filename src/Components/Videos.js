@@ -8,7 +8,7 @@ export default function Videos(props) {
 		<div>
 			{vids.map((video) => {
 				return (
-					<Link to={`/video/${video.id.videoId}`}>
+					<Link key={video.etag} to={`/video/${video.id.videoId}`}>
 						<section>
 							<div>
 								<img src={`${video.snippet.thumbnails.default.url}`} alt=""></img>
