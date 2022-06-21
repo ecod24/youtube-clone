@@ -1,5 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
+import withNavigate from "./WithNavigate";
+
 class SearchBar extends React.Component {
 	constructor() {
 		super();
@@ -23,10 +25,14 @@ class SearchBar extends React.Component {
 		)
 			.then((response) => response.json())
 			.then((obj) => {
-				updateVideos(obj.items);
+				updateVideos(
+					obj.items.filter((video) => {
+						return video.id.kind === "youtube#video";
+					})
+				);
 			});
 		this.setState({ searchBar: "" });
-		//useNavigate('/');
+		//useNavigate('/'); essentially, go back home when a search is complete
 	};
 
 	render() {
@@ -49,4 +55,4 @@ class SearchBar extends React.Component {
 		);
 	}
 }
-export default SearchBar;
+export default withNavigate(SearchBar);
