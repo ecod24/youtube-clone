@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
+import "./CommentSection.css";
 
-class Comments extends React.Component {
+class CommentSection extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			commentName: '',
-			comment: '',
+			commentName: "",
+			comment: "",
 			comments: [],
 		};
 	}
 
-	handleComments = (event) => {
+	handleComment = (event) => {
 		this.setState({ comment: event.target.value });
 	};
 	handleCommentName = (event) => {
@@ -18,40 +19,51 @@ class Comments extends React.Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
+		let commentStr = `${this.state.commentName}: ${this.state.comment}`;
+		this.setState({ comments: [...this.state.comments, commentStr] });
 
-		this.setState({ commentName: '' });
-		this.setState({ comment: '' });
-
-		// add comment and comment name to end of page
+		this.setState({ commentName: "" });
+		this.setState({ comment: "" });
 	};
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<label>
-					<input
-						value={this.commentName}
-						type='text'
-						id='commentName'
-						name='commentName'
-						placeholder='Name'
-						onChange={this.handleCommentName}
-					/>
-				</label>
-				<label>
-					<input
-						value={this.state.comment}
-						type='text'
-						id='comments'
-						name='comments'
-						placeholder='Add a comment...'
-						onChange={this.handleComments}
-					/>
-					<button>Submit</button>
-				</label>
-			</form>
+			<>
+				<h3>Comments</h3>
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						Name
+						<input
+							value={this.commentName}
+							type="text"
+							id="commentName"
+							name="commentName"
+							placeholder="Name"
+							onChange={this.handleCommentName}
+						/>
+					</label>
+					<br />
+					<label>
+						Add comment
+						<input
+							value={this.state.comment}
+							type="text"
+							id="comments"
+							name="comments"
+							placeholder="Add a comment..."
+							onChange={this.handleComment}
+						/>
+						<button>Submit</button>
+					</label>
+				</form>
+				<div className="list-comments">
+					{this.state.comments.map((comment) => {
+						return <p>{comment}</p>;
+					})}
+				</div>
+			</>
 		);
 	}
 }
 
-export default Comments;
+export default CommentSection;

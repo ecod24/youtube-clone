@@ -2,6 +2,7 @@ import YouTube from "react-youtube";
 import withParams from "./WithParams";
 import React, { Component } from "react";
 import "./Video.css";
+import CommentSection from "./CommentSection";
 
 class Video extends Component {
 	constructor() {
@@ -16,6 +17,8 @@ class Video extends Component {
 			<div className="player">
 				{" "}
 				<YouTube videoId={id} />
+				<br />
+				<CommentSection />
 			</div>
 		);
 	}

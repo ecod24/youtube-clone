@@ -1,0 +1,11 @@
+input {
+	padding: 5px;
+	margin: 5px;
+}
+button {
+	padding: 10px;
+	border: none;
+}
+button:hover {
+	border: 1px solid red;
+}
