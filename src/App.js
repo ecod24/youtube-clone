@@ -32,7 +32,7 @@ class App extends React.Component {
 					<Route path="/" element={<Home videos={this.state.videos} />} />
 					<Route path="/about" element={<About />} />
 					<Route path="*" element={<PageNotFound />} />
-					<Route path="/video/:id" element={<Video />} />
+					<Route path="/videos/:id" element={<Video />} />
 				</Routes>
 			</div>
 		);
