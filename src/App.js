@@ -7,7 +7,7 @@ import About from "./Components/About";
 import Video from "./Components/Video";
 import SearchBar from "./Components/SearchBar";
 import "./App.css";
-// import PageNotFound from "./Components/PageNotFound";
+import PageNotFound from "./Components/PageNotFound";
 
 class App extends React.Component {
 	constructor() {
@@ -31,7 +31,7 @@ class App extends React.Component {
 				<Routes>
 					<Route path="/" element={<Home videos={this.state.videos} />} />
 					<Route path="/about" element={<About />} />
-					{/* <Route path='*' element={<PageNotFound />} /> */}
+					<Route path="*" element={<PageNotFound />} />
 					<Route path="/video/:id" element={<Video />} />
 				</Routes>
 			</div>

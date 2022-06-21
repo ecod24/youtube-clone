@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
 		const { updateVideos } = this.props;
 		event.preventDefault();
 		if (!this.state.searchBar) {
-			alert("No search results yet! Please submit a search above");
+			alert("No search results yet! Please submit a search below!");
 			return;
 		}
 		fetch(
