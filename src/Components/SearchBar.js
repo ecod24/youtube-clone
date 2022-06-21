@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 class SearchBar extends React.Component {
 	constructor() {
 		super();
@@ -38,7 +39,7 @@ class SearchBar extends React.Component {
 							type="text"
 							id="search"
 							name="search"
-							placeholder="Revived?"
+							placeholder="Search..."
 							onChange={this.handleSearch}
 						/>
 						<button className="search-button">Search</button>

@@ -1,6 +1,7 @@
 import YouTube from "react-youtube";
 import withParams from "./WithParams";
 import React, { Component } from "react";
+import "./Video.css";
 
 class Video extends Component {
 	constructor() {
@@ -12,7 +13,7 @@ class Video extends Component {
 	render() {
 		const { id } = this.props.params;
 		return (
-			<div>
+			<div className="player">
 				{" "}
 				<YouTube videoId={id} />
 			</div>

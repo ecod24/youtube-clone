@@ -1,0 +1,16 @@
+#search {
+	font-family: Georgia;
+	border: none;
+	padding: 7px;
+	margin: 5px;
+}
+
+.search-button {
+	background-color: red;
+	border-radius: 15px;
+	font-family: Georgia;
+	color: white;
+	padding: 5px;
+	background: none;
+	border-style: solid;
+}
