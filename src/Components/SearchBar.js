@@ -38,7 +38,7 @@ class SearchBar extends React.Component {
 							type="text"
 							id="search"
 							name="search"
-							placeholder="Search..."
+							placeholder="Revived?"
 							onChange={this.handleSearch}
 						/>
 						<button className="search-button">Search</button>
