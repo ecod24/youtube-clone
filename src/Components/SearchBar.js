@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
 				);
 			});
 		this.setState({ searchBar: "" });
-		//useNavigate('/'); essentially, go back home when a search is complete
+		//useNavigate('/'); ideally, go back home when a search is complete
 	};
 
 	render() {
